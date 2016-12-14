@@ -179,6 +179,7 @@ int __stdcall Read(Context *pContext)
 	}
 	VirtualFreeEx(pContext->hProc, pCrossLvItem, sizeof(LV_ITEM), MEM_RELEASE);
 	VirtualFreeEx(pContext->hProc, crossBuff, 256, MEM_RELEASE);
+	VirtualFreeEx(pContext->hProc, pCrossLvColumn, sizeof(LV_COLUMN), MEM_RELEASE);
 
 	return 0;
 
